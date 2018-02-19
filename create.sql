@@ -24,7 +24,7 @@ CREATE TABLE typebook
 
 CREATE TABLE books
 (
-  isbn             INTEGER PRIMARY KEY AUTOINCREMENT,
+  isbn             INTEGER PRIMARY KEY,
   author           INTEGER,
   title            VARCHAR(255),
   publisher        INTEGER,
