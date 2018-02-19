@@ -5,6 +5,7 @@ public class Book {
 
     private int isbn;
     private int author;
+    private String title;
     private int publisher;
     private int publicationYear;
     private double price;
@@ -13,9 +14,10 @@ public class Book {
     public Book() {
     }
 
-    public Book(int isbn, int author, int publisher, int publicationYear, double price, int type) {
+    public Book(int isbn, int author, String title, int publisher, int publicationYear, double price, int type) {
         this.isbn = isbn;
         this.author = author;
+        this.title = title;
         this.publisher = publisher;
         this.publicationYear = publicationYear;
         this.price = price;
@@ -80,5 +82,13 @@ public class Book {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
