@@ -6,7 +6,7 @@ public class Book {
     private int isbn;
     private int author;
     private String title;
-    private int publisher;
+    private String publisher;
     private int publicationYear;
     private double price;
     private int type;
@@ -14,7 +14,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(int isbn, int author, String title, int publisher, int publicationYear, double price, int type) {
+    public Book(int isbn, int author, String title, String publisher, int publicationYear, double price, int type) {
         this.isbn = isbn;
         this.author = author;
         this.title = title;
@@ -26,14 +26,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "isbn=" + isbn +
-                ", author=" + author +
-                ", publisher=" + publisher +
-                ", publicationYear=" + publicationYear +
-                ", price=" + price +
-                ", type=" + type +
-                '}';
+        return String.format("ISBN: %d, Title: %s, Publisher's id: %s, Publication Year: %d, Price: %f, Type id: %d",
+                isbn, title, publisher, publicationYear, price, type);
     }
 
     public int getIsbn() {
@@ -52,11 +46,11 @@ public class Book {
         this.author = author;
     }
 
-    public int getPublisher() {
+    public String getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(int publisher) {
+    public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
 
@@ -91,4 +85,6 @@ public class Book {
     public void setTitle(String title) {
         this.title = title;
     }
+
+
 }

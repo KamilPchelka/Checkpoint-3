@@ -3,16 +3,14 @@ package com.codecool.kamilpchelka.checkpoint3.models;
 public class Person {
 
     private String name;
-    private String surname;
     private String city;
     private String country;
 
     public Person() {
     }
 
-    public Person(String name, String surname, String city, String country) {
+    public Person(String name, String city, String country) {
         this.name = name;
-        this.surname = surname;
         this.city = city;
         this.country = country;
     }
@@ -23,14 +21,6 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getCity() {
@@ -51,11 +41,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", city='" + city + '\'' +
-                ", country='" + country + '\'' +
-                '}';
+        return String.format("Name: %s, City: %s, Country: %s", name, city, country);
     }
 }

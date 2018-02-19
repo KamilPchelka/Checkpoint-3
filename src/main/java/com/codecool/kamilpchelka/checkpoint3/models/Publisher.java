@@ -2,32 +2,32 @@ package com.codecool.kamilpchelka.checkpoint3.models;
 
 public class Publisher extends Person {
 
-    private int id;
+    private String id;
 
-    public Publisher(String name, String surname, String city, String country) {
-        super(name, surname, city, country);
+
+    public Publisher(String id) {
+        this.id = id;
     }
 
-    public Publisher(String name, String surname, String city, String country, int id) {
-        super(name, surname, city, country);
+    public Publisher(String name, String city, String country, String id) {
+        super(name, city, country);
         this.id = id;
     }
 
     public Publisher() {
+
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Publisher{" +
-                "id=" + id +
-                '}';
+        return String.format(super.toString() + ", ID: %s", id);
     }
 }

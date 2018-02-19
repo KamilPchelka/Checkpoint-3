@@ -19,6 +19,9 @@ public class AbstractView {
         return scanner.nextLine();
     }
 
+    public void clearConsole() {
+        System.out.println(CLEAR_CONSOLE);
+    }
     public String getUserInput(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine();
@@ -29,4 +32,6 @@ public class AbstractView {
         System.out.println("Hit enter to continue");
         getUserInput();
     }
+
+
 }
